@@ -72,7 +72,7 @@
 
                 $average = array_sum($students[$i]['marks']) / count($students[$i]['marks']);
 
-                echo $average;
+                echo round($average, 2);
                 ?>
             </strong>
         </p>
