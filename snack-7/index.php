@@ -19,66 +19,62 @@
             "name" => "Tony",
             "lastname" => "Stark",
             "marks" => [
-                "english" => '74',
-                "science" => '92',
-                "math" => '70',
+                "english" => 74,
+                "science" => 92,
+                "math" => 70,
             ]
         ],
         [
             "name" => "Steve",
             "lastname" => "Rogers",
             "marks" => [
-                "english" => '87',
-                "science" => '55',
-                "math" => '71',
+                "english" => 87,
+                "science" => 55,
+                "math" => 71,
             ]
         ],
         [
             "name" => " Bruce",
             "lastname" => "Banner",
             "marks" => [
-                "english" => '60',
-                "science" => '100',
-                "math" => '90',
+                "english" => 60,
+                "science" => 100,
+                "math" => 90,
             ]
         ],
         [
             "name" => "Natasha",
             "lastname" => "Romanoff",
             "marks" => [
-                "english" => '74',
-                "science" => '82',
-                "math" => '65',
+                "english" => 74,
+                "science" => 82,
+                "math" => 65,
             ]
         ],
         [
             "name" => "Stephen",
             "lastname" => "Strange",
             "marks" => [
-                "english" => '75',
-                "science" => '95',
-                "math" => '77',
+                "english" => 75,
+                "science" => 95,
+                "math" => 80,
             ],
         ]
     ];
     ?>
 
-<?php 
-
-function average($english,$science,$math) {
-    return ($english+$science+$math)/3;
-  }
-?>
-
     <?php
     for ($i = 0; $i < count($students); $i++) { ?>
 
+        <p><strong>
+                <?php
+                echo $students[$i]["name"] . "  " . $students[$i]["lastname"] . " || " . "marks average" . " => ";
 
+                $average = array_sum($students[$i]['marks']) / count($students[$i]['marks']);
 
-        <p>
-            <?php
-            echo $students[$i]["name"] . "  " . $students[$i]["lastname"] . " || " . "Marks" . $students[$i]["marks"];
-            ?>
+                echo $average;
+                ?>
+            </strong>
         </p>
 
     <?php } ?>
