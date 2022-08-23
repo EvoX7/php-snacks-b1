@@ -13,37 +13,75 @@
 
     <h2>Snack 5</h2>
 
-    <?php 
-     $students = [
+    <?php
+    $students = [
         [
-            "Nome" => "Antonio",
-            "Cognome" => "De Curtis",
+            "name" => "Tony",
+            "lastname" => "Stark",
+            "marks" => [
+                "english" => '74',
+                "science" => '92',
+                "math" => '70',
+            ]
         ],
         [
-            "Nome" => "Claudio",
-            "Cognome" => "Bisio",
+            "name" => "Steve",
+            "lastname" => "Rogers",
+            "marks" => [
+                "english" => '87',
+                "science" => '55',
+                "math" => '71',
+            ]
         ],
         [
-            "Nome" => "Alessandro",
-            "Cognome" => "Siani",
+            "name" => " Bruce",
+            "lastname" => "Banner",
+            "marks" => [
+                "english" => '60',
+                "science" => '100',
+                "math" => '90',
+            ]
         ],
         [
-            "Nome" => "Alberto",
-            "Cognome" => "Sordi",
+            "name" => "Natasha",
+            "lastname" => "Romanoff",
+            "marks" => [
+                "english" => '74',
+                "science" => '82',
+                "math" => '65',
+            ]
         ],
         [
-            "Nome" => "Massimo",
-            "Cognome" => "Troisi",
-        ],
-     ]
+            "name" => "Stephen",
+            "lastname" => "Strange",
+            "marks" => [
+                "english" => '75',
+                "science" => '95',
+                "math" => '77',
+            ],
+        ]
+    ];
     ?>
 
-    <p>
-        <?php 
-        $new_paragraphs = explode('.', $paragraph);
-        var_dump($new_paragraphs) ;
-        ?>
-    </p>
+<?php 
+
+function average($english,$science,$math) {
+    return ($english+$science+$math)/3;
+  }
+?>
+
+    <?php
+    for ($i = 0; $i < count($students); $i++) { ?>
+
+
+
+        <p>
+            <?php
+            echo $students[$i]["name"] . "  " . $students[$i]["lastname"] . " || " . "Marks" . $students[$i]["marks"];
+            ?>
+        </p>
+
+    <?php } ?>
 </body>
 
 </html>
