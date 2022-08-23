@@ -11,7 +11,7 @@
 <body>
 
 
-    <h2>Snack 5</h2>
+    <h2>Snack 7</h2>
 
     <?php
     $students = [

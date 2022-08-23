@@ -9,6 +9,7 @@
 </head>
 
 <body>
+<h2>Snack 2</h2>
 
     <?php
     $games = [
