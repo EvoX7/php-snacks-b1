@@ -68,11 +68,8 @@
 
         <p><strong>
                 <?php
-                echo $students[$i]["name"] . "  " . $students[$i]["lastname"] . " || " . "marks average" . " => ";
-
                 $average = array_sum($students[$i]['marks']) / count($students[$i]['marks']);
-
-                echo round($average, 2);
+                echo $students[$i]["name"] . "  " . $students[$i]["lastname"] . " || " . "marks average" . " => " . round($average, 2);
                 ?>
             </strong>
         </p>
